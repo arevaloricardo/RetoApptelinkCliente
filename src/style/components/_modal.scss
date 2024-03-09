@@ -1,0 +1,304 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.modal__container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 100vh;
+
+    animation: background alternate 0.2s ease-in-out;
+
+    background-color: rgba(v.$black, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  
+}
+
+  .modal{
+        animation: abrirModal alternate 0.2s ease-in-out;
+        background-color: v.$white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 3rem rgba(v.$black, 0.1);
+        width: 70rem;
+        height: 40rem;
+        max-width: 90%;
+        max-height: 90%;
+        overflow-y: auto;
+        position: absolute;
+
+        &.modal__content-view__product{
+            width: 75rem;
+            height: 32rem;
+        }
+
+        &.modal__content-delete{
+            width: 45rem;
+            height: 25rem;
+            text-align: center;
+            overflow: hidden;
+
+            &__product{
+                width: 50rem;
+                height: 34rem;
+                overflow: hidden;
+                P{
+                    text-align: center;
+                    padding: 3rem;
+                }
+            }
+        }
+
+        &.modal__content-create{
+            width: 75rem;
+            height: 74rem;
+
+            &__product{
+                width: 75rem;
+            height: 55rem;
+            overflow: hidden;
+            }
+        }
+
+        &.modal__content-select__customer{
+            width: 130rem;
+            height: 100rem;
+        }
+    }
+
+@keyframes abrirModal{
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+@keyframes background{
+    from{
+        background-color: rgba(v.$black, 0);
+    }
+    to{
+        background-color: rgba(v.$black, 0.5);
+    }
+    
+}
+
+.modal__close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: v.$black;
+    border: none;
+    padding: 1rem 1.7rem;
+    border-radius: 1rem ;
+    background-color: v.$grey;
+    font-weight: v.$semiBold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        color: v.$secundary;
+    }
+}
+
+
+
+.modal{
+    padding: 5rem;
+}
+
+.modal__tittle{
+    margin-bottom: 2rem;
+}
+
+.modal__data{
+    p{
+        font-size: 2rem;
+        font-weight: v.$bold;
+
+        span{
+            font-weight: v.$regular;    
+        }
+    }
+}
+
+.modal__form-create{
+
+    padding: 2rem;
+    border-radius: 1rem;
+
+    .modal__form-create__input{
+        margin-bottom: 2rem;
+    }
+
+    input{
+        border: grey 1.5px solid;
+        padding: 0.7rem;
+        margin-top: 1rem;
+        width: 100%;
+        border-radius: 0.5rem;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    label{
+        font-weight: v.$semiBold;
+        margin-right: 1rem;
+        color: v.$black;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.input__error{
+    outline: v.$error 1.5px solid;
+    border: v.$error 1.5px solid;
+
+    &:only-child{
+        content: 'Campo requerido';
+        color: v.$error;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    
+    }
+}
+
+.modal__delete__tittle{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.modal__content-update{
+    
+    width: 70rem;
+    height: 80rem;
+    form{
+        background-color: v.$grey;
+        padding: 3rem;
+        border-radius: 1rem;
+
+    }
+
+    .modal__form-update__input{
+        margin-bottom: 2rem;
+
+        label{
+            font-weight: v.$semiBold;
+            margin-right: 1rem;
+            color: v.$black;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        input{
+            border: grey 1.5px solid;
+            padding: 0.7rem;
+            margin-top: 1rem;
+            width: 100%;
+            border-radius: 0.5rem;
+            border: none;
+
+            &:focus{
+                outline: none;
+            }
+        }
+
+        select{
+            border: grey 1.5px solid;
+            padding: 0.7rem;
+            margin-top: 1rem;
+            width: 100%;
+            border-radius: 0.5rem;
+            border: none;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+}
+
+.modal__content-update__product{
+    
+    width: 70rem;
+    height: 70rem;
+    form{
+        background-color: v.$grey;
+        padding: 3rem;
+        border-radius: 1rem;
+
+    }
+
+    .modal__form-update__input{
+        margin-bottom: 2rem;
+
+        label{
+            font-weight: v.$semiBold;
+            margin-right: 1rem;
+            color: v.$black;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        input{
+            border: grey 1.5px solid;
+            padding: 0.7rem;
+            margin-top: 1rem;
+            width: 100%;
+            border-radius: 0.5rem;
+            border: none;
+
+            &:focus{
+                outline: none;
+            }
+        }
+
+        select{
+            border: grey 1.5px solid;
+            padding: 0.7rem;
+            margin-top: 1rem;
+            width: 100%;
+            border-radius: 0.5rem;
+            border: none;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+}
+
+.modal__content-delete__invoice{
+    width: 45rem;
+    height: 25rem;
+    text-align: center;
+    overflow: hidden;
+
+    &__product{
+        width: 50rem;
+        height: 34rem;
+        overflow: hidden;
+        P{
+            text-align: center;
+            padding: 3rem;
+        }
+    }
+}

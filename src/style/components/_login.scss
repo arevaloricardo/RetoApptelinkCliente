@@ -1,0 +1,89 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.login__container{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: v.$primary;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.login__content{
+    background-color: v.$white;
+    border-radius: 1rem;
+    width: 55rem;
+    height: 40rem;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+
+   margin-bottom: 20rem;
+
+
+
+    padding: 7rem;
+
+    h1{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        line-height: 0;
+        text-align: center;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login__input{
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 2rem;
+
+        label{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        input{
+            padding: 1rem;
+            font-size: 1.5rem;
+            border-radius: 0.5rem;
+            border: grey 1px solid;
+
+            &:focus{
+                outline: none;
+                
+            }
+        }
+
+    }
+}
+
+.login__tittle-page{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    line-height: 0;
+    text-align: center;
+    color: v.$white;
+
+    b{
+        color: v.$secundary;
+    }
+
+    margin-bottom: 5rem;
+}

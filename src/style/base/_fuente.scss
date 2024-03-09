@@ -1,0 +1,37 @@
+@use 'variables' as v;
+
+h1, h2, h3 {
+    font-family: v.$fuente_headings;
+    margin: 0;
+    font-weight: 800;
+    padding: 0;
+}
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2rem;
+}
+p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.tiny {
+    font-size: 1.2rem;
+    line-height: 1.5;
+
+    &-bold{
+        font-size: 1.2rem;
+        line-height: 1.5;
+        font-weight: v.$bold;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

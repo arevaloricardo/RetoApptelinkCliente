@@ -1,0 +1,28 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.alert__container{
+    background-color: v.$error;
+    margin-top: 2rem;
+
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+
+    color: v.$white;
+
+    p{
+        font-weight: v.$bold;
+        font-size: 2rem;
+    }
+
+    .alert__text{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+}

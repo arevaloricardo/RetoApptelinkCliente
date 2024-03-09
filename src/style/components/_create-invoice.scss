@@ -1,0 +1,252 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.create-invoice__container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.search__container{
+    select{
+        padding: 0.3rem;
+    }
+}
+
+.products__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+        background-color: v.$white;
+        font-size: 1.3rem;
+
+        th,
+        td{
+            padding: 1rem;
+            text-align: left;
+        }
+
+        tr{
+            border-bottom: 1px solid v.$grey;
+        }
+        th{
+            padding-left: 1rem;
+            padding-right: 5rem;
+
+            &:last-child{
+                padding-left: 0;
+            }
+        }
+
+        .table__head{
+            background-color: v.$primary;
+            color: v.$white;
+            width: 100%;
+        }
+    }
+
+    .product__stock{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        background-color: v.$grey;
+        color: v.$black;
+        text-align: center;
+        font-weight: v.$semiBold;
+    }
+}
+
+.invoice__container{
+    border: v.$grey 1px solid;
+    min-height: 75vh;
+    margin: 4rem;
+    margin-top: 0;
+    border-radius: 1rem;
+
+    .invoice__header{
+        text-align: center;
+        margin-top: 2rem;
+        text-transform: uppercase;
+    }
+}
+
+.products__container{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.invoice__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 75vh;
+}
+
+.no__products{
+    p{
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}
+
+.invoice__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+    background-color: v.$grey;
+    border-top: v.$grey 1px solid;
+    border-radius: 1rem;
+
+    .invoice__total{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: v.$semiBold;
+    }
+
+    .invoice__button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+        background-color: v.$correct;
+        color: v.$white;
+        border-radius: 0.5rem;
+        border: none;
+        font-weight: v.$semiBold;
+        transition: all 0.2s ease-in-out;
+
+        &:hover{
+            background-color: darken(v.$correct, 5);
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.invoice__products__table__container{
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+        background-color: v.$white;
+        font-size: 1.3rem; 
+        text-wrap: normal;
+
+        th,
+        td{
+            padding: 1rem;
+            text-align: left;
+        }
+
+        tr{
+            border-bottom: 1px solid v.$grey;
+        }
+        th{
+            padding-left: 1rem;
+            padding-right: 5rem;
+
+            &:last-child{
+                padding-left: 0;
+            }
+        }
+
+        .table__head{
+            background-color: v.$primary;
+            color: v.$white;
+            width: 100%;
+        }
+    
+    }
+}
+
+.invoice__quantity{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 0.5rem;
+    
+    input{
+        padding: 0.5rem;
+        width: 6rem;
+        text-align: center;
+
+        &:focus{
+            outline: none;
+        }
+
+        &::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+}
+
+.invoice__table__code{
+   font-size: 1.2rem;
+    font-weight: v.$semiBold;
+}
+
+.invoice__products__tittle{
+    margin-bottom: 1rem;
+}
+
+.invoice__table__code__tittle{
+    width: 16rem;
+}
+
+.invoice__container{
+    padding: 2rem;
+}
+
+.invoice__customer__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .button{
+        margin-right: 1rem;
+        padding: 0.9rem;
+        font-size: 1.3rem;
+
+        &.button__primary{
+            background-color: v.$primary;
+        }
+    }
+
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+    .customer__data{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        margin-right: 2rem;
+
+        .customer__data__tittle{
+            font-weight: v.$semiBold;
+            margin-bottom: 1rem;
+        }
+    }
+    
+}

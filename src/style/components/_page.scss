@@ -1,0 +1,14 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.page__header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    h1{
+        margin-right: 3rem;
+    }
+}
+

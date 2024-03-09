@@ -1,0 +1,39 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.search__container{
+
+    margin-bottom: 2rem;
+
+    background-color: v.$grey;
+    border-radius: 1rem;
+
+    padding: 2rem;
+
+    label{
+        font-weight: v.$regular;
+        margin-right: 1rem;
+        color: grey;
+        margin-right: 1rem;
+    }
+    
+    select{
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        font-weight: v.$light;
+        color: v.$black;
+    }
+
+    input{
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: none;
+
+        &:focus{
+            outline: none;
+        }
+    }
+}

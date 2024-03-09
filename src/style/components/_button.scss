@@ -1,0 +1,178 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.button{
+
+    color: v.$white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: v.$bold;
+    transition: all 0.2s ease-in-out;
+    
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(0.95);
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.button__add{
+
+    background-color: v.$secundary;
+}
+
+.button__delete{
+
+    font-weight: v.$semiBold;
+    font-size: 1.4rem;
+    background-color: v.$error;
+    color: v.$white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        background-color: darken(v.$error, 5);
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
+
+.button__edit{
+
+    font-weight: v.$semiBold;
+    font-size: 1.4rem;
+    background-color: v.$correct;
+    color: v.$white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    margin-right: 0.5rem;
+
+
+    &:hover{
+        background-color: darken(v.$correct, 5);
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
+
+.button__view{
+    font-weight: v.$semiBold;
+    font-size: 1.4rem;
+    background-color: v.$secundary;
+    color: v.$white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    margin-right: 0.5rem;
+
+    &:hover{
+        background-color: darken(v.$secundary, 5);
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
+
+
+.button-page__enable{
+    background-color: v.$secundary;
+    color: v.$white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: v.$semiBold;
+
+    &:hover{
+        background-color: darken(v.$secundary, 5);
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.button-page__disable{
+    background-color: v.$grey;
+    color: v.$white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: v.$semiBold;
+    
+    &:hover{
+        transition: all 0.1s ease-in-out;
+        background-color: darken(v.$grey, 5);
+    }
+}
+
+.pagination{
+    
+    display: flex;
+    justify-content: space-around;
+    width: 25rem;
+
+    button{
+        display: flex;
+        align-items: center;
+
+    }
+
+    i{
+        font-size: 2rem;
+        
+    }
+
+}
+
+.button__modal__create{
+    background-color: v.$correct;
+    color: v.$white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: v.$semiBold;
+    transition: all 0.2s ease-in-out;
+   
+
+    &:hover{
+        background-color: darken(v.$correct, 5);
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
+
+.button__container-center{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.button__green{
+    background-color: v.$correct;
+    cursor: pointer;
+}
+
+.button__red{
+    background-color: v.$error;
+    cursor: pointer;
+}
+
+.button__login{
+    background-color: v.$secundary;
+
+    &:hover{
+        background-color: darken(v.$secundary, 10);
+        transform: scale(1.02);
+    }
+}
+
+
+.button__white{
+    background-color: v.$white;
+    color: v.$correct;
+}
